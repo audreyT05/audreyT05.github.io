@@ -125,8 +125,12 @@ aside {
 
 aside a {
   display: block;
-  float: left;
   width: 50%;
+}
+
+.img_row{
+  display: flex;
+  flex-wrap: wrap;
 }
 
 aside img {
