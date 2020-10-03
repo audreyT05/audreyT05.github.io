@@ -1,7 +1,6 @@
 .header{
     background-color:rgba(52, 65, 109, 0.938);
     display: flex;
-    
     justify-content: space-between;
     padding: 5px;
     align-items: center;
@@ -16,43 +15,24 @@
     flex-shrink: 0;
 }
 .wrapper{
-    background-color: darkred;
+    background-color: teal;
     display: flex;
-    justify-content: center;
-    margin: auto;
     padding: 15px;
+
 }
 .content{
-    background-color: rgb(240, 145, 145);
     max-width: 960px;
-    flex: 1;
-    margin: auto;
-}
-.content img{
-    border: 1px red solid;
-    border-radius: 4px;
-    
 }
 .content p{
     flex-wrap: wrap;
     border: rgb(202, 115, 33) 2px solid;
 }
+
+.content img{
+    border: 1px red solid;
+    border-radius: 4px;
+    margin-left: 15px;
+}
 .experience{
     background-color: wheat;
-    flex-grow: 2;
-}
-
-
-@media (max-width: 1000px){
-    .wrapper{
-        display: block;
-    }
-    .content{
-        display: flex;
-        justify-content: space-evenly;
-    }
-    .experience{
-        padding: 15px;
-    }
-
 }
