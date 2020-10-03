@@ -40,22 +40,17 @@
 .content{
     background-color: coral;
     margin-top: 15px;
-   
     width: 960px;
     justify-content: space-around;
 }
 .content{
-    
     font-family: 'Allan', cursive;
     font-size: 20px;
     padding:20px ;
     margin: 10px;
     
-
-   
 }
 .content img{
-   
     border: 1px red solid;
     border-radius: 4px ;
     width: 33%;
@@ -65,7 +60,6 @@
 
 .experience{
     background-color:  coral;
-   
     display: flex;
     width: 66.6%;
 }
@@ -75,5 +69,4 @@
     flex: 1;
     flex-wrap: wrap;
     
- 
 }
