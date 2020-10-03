@@ -28,6 +28,7 @@
 }
 .goal{
     flex: 1;
+    margin-right: auto;
 }
 
     
@@ -35,12 +36,8 @@
     display: flex;
     flex-wrap: wrap;
     border: rgb(202, 115, 33) 1px solid;
-   
-    margin: auto;
-    
     justify-content: center;
-  
-    
+   
 }
 
 .goal img{
@@ -48,7 +45,6 @@
     border: 1px red solid;
     border-radius: 4px;
     margin: auto;
-    
     justify-content: center;
 }
 .experience{
@@ -70,6 +66,16 @@
         flex-direction: row;
         justify-content: space-evenly;
     }
+  
+    .goal p{
+        margin-right: auto;
+        max-width: 33%;
+    }
+    .goal image{
+        max-width: 33%;
+
+    }
+
     .experience{
         padding: 15px;
     }
