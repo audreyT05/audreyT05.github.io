@@ -26,21 +26,20 @@
 }
 .content{
     flex: 1;
-    
     margin: auto;
 }
 .content img{
     border: 1px red solid;
     border-radius: 4px;
+    
 }
 .content p{
     flex-wrap: wrap;
     border: rgb(202, 115, 33) 2px solid;
 }
 .experience{
-    flex: 3;
     background-color: wheat;
-    
+    flex-grow: 2;
 }
 
 
