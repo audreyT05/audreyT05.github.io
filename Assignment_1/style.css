@@ -13,6 +13,7 @@
 }
 .header img{
     max-height: 150px;
+    flex-shrink: 0;
 }
 .wrapper{
     background-color: darkred;
@@ -34,7 +35,7 @@
 }
 .content p{
     flex-wrap: wrap;
-    border: rgb(202, 115, 33) 5px solid;
+    border: rgb(202, 115, 33) 2px solid;
 }
 .experience{
     flex: 3;
