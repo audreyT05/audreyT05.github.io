@@ -1,7 +1,7 @@
 .header{
     background-color:rgba(52, 65, 109, 0.938);
     display: flex;
-    flex-wrap: wrap;
+    
     justify-content: space-between;
     padding: 5px;
     align-items: center;
@@ -19,33 +19,33 @@
     display: flex;
     justify-content: center;
     max-width: 960px;
-    border: blue 5px solid;
+    
     margin: auto;
+    padding: 15px;
 }
 .content{
     flex: 1;
-    border: purple 5px solid;
+    
     margin: auto;
 }
 .content img{
     border: 1px red solid;
     border-radius: 4px;
-    max-width: 33.3%;
-   
-   
 }
 .content p{
     flex-wrap: wrap;
     border: rgb(202, 115, 33) 5px solid;
-    max-width: 33.3%;
-    align-items: flex-start;
-
 }
 .experience{
     flex: 3;
     background-color: wheat;
     
 }
+
+
+
+
+
 
 @media (max-width: 1000px){
     .wrapper{
@@ -54,6 +54,9 @@
     .content{
         display: flex;
         justify-content: space-evenly;
+    }
+    .experience{
+        padding: 15px;
     }
 
 }
