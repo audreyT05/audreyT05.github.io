@@ -26,15 +26,18 @@
     max-width: 960px;
     border: rgb(154, 137, 250) 5px solid;
     justify-content: center;
-    
+}
+.goal{
+    border: rgb(91, 221, 112) 5px solid;
+}    
     
 
-}
+    
 .goal p{
     display: flex;
     flex-wrap: wrap;
     border: rgb(202, 115, 33) 2px solid;
-    max-width: 33.3%;
+    
     justify-content: center;
   
     
@@ -44,8 +47,9 @@
     display: flex;
     border: 1px red solid;
     border-radius: 4px;
-    margin-left: 15px;
-    max-width: 33.3%;
+  
+    margin-left: auto;
+    
     justify-content: center;
 }
 .experience{
