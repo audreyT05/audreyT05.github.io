@@ -18,7 +18,7 @@
     background-color: teal;
     display: flex;
     padding: 15px;
-    
+    justify-content: center;
 
 }
 .content{
@@ -27,6 +27,7 @@
     border: rgb(154, 137, 250) 5px solid;
     justify-content: center;
     
+    
 
 }
 .goal p{
@@ -34,6 +35,7 @@
     flex-wrap: wrap;
     border: rgb(202, 115, 33) 2px solid;
     max-width: 33.3%;
+    justify-content: center;
   
     
 }
@@ -44,7 +46,7 @@
     border-radius: 4px;
     margin-left: 15px;
     max-width: 33.3%;
-    margin-right: 0;
+    justify-content: center;
 }
 .experience{
     background-color: wheat;
@@ -56,6 +58,10 @@
         display: block;
     }
     .content{
+        display: flex;
+   
+    }
+    .goal{
         display: flex;
         justify-content: space-evenly;
     }
