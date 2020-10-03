@@ -18,21 +18,48 @@
     background-color: teal;
     display: flex;
     padding: 15px;
+    
 
 }
 .content{
     max-width: 960px;
+    
+    border: rgb(48, 25, 182) 5px solid;
+   
+
 }
 .content p{
+    display: flex;
     flex-wrap: wrap;
     border: rgb(202, 115, 33) 2px solid;
+    max-width: 33.3%;
+  
+    
 }
 
 .content img{
+    display: flex;
     border: 1px red solid;
     border-radius: 4px;
     margin-left: 15px;
+    max-width: 33.3%;
+    margin-right: 0;
 }
 .experience{
     background-color: wheat;
+    flex: 66%;
+}
+
+@media (max-width: 1000px){
+    .wrapper{
+        display: block;
+    }
+    .content{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .experience{
+        padding: 15px;
+    }
+
 }
