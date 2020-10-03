@@ -19,12 +19,12 @@
     background-color: darkred;
     display: flex;
     justify-content: center;
-    max-width: 960px;
-    
     margin: auto;
     padding: 15px;
 }
 .content{
+    background-color: rgb(240, 145, 145);
+    max-width: 960px;
     flex: 1;
     margin: auto;
 }
