@@ -22,13 +22,14 @@
 
 }
 .content{
+    display: flex;
     max-width: 960px;
-    
     border: rgb(154, 137, 250) 5px solid;
-   
+    justify-content: center;
+    
 
 }
-.content p{
+.goal p{
     display: flex;
     flex-wrap: wrap;
     border: rgb(202, 115, 33) 2px solid;
@@ -37,7 +38,7 @@
     
 }
 
-.content img{
+.goal img{
     display: flex;
     border: 1px red solid;
     border-radius: 4px;
