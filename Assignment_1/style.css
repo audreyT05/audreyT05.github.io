@@ -37,7 +37,7 @@
 .goal p{
     display: flex;
     flex-wrap: wrap;
-    border: rgb(202, 115, 33) 1px solid;
+    
     justify-content: center;
    
 }
