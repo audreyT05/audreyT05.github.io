@@ -278,8 +278,12 @@ function random(){
         CovertedName = document.createTextNode(CountriesName[random]);
         CreateP.appendChild(CovertedName);
     
-        listItem = document.createElement("li");
-        listItem.appendChild(CreateP);
-        ContentList.appendChild(listItem);
+        list = document.createElement("li");
+        list.appendChild(CreateP);
+        ContentList.appendChild(list);
     }
 }
+
+//(8)Display the name of each country in a normal font weight
+//(9)Display the country code for each in a bold font weight
+
