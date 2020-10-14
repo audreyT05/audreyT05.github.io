@@ -1,9 +1,4 @@
-// Using JS, inject an ordered list into the div with the class "content" 
-const cont = document.createElement('div');
-cont.className = "content";
-document.body.append(cont);
-
-const list = ["Afghanistan",
+const CountriesName = ["Afghanistan",
 "Albania",
 "Algeria",
 "American Samoa",
@@ -252,29 +247,39 @@ const list = ["Afghanistan",
 "Zambia",
 "Zimbabwe",
 "Åland Islands"];
-
-//Give your new ordered list the class "countries"
-const clist = document.createElement('ol');
-clist.className = "countries";
-document.querySelector('.content').append(clist);
-
-
-
-// Design the following function to run on the click of a button from the index page
-const button = document.querySelector("buttom");
+//(1)Add a header to the lab with "YourName's List Of Countries"
+//(2)Using JS, inject an ordered list into the div with the class "content"
+//(3)Give your new ordered list the class "countries"
+let ClassContent = document.createElement('div');
+ClassContent.className = "content";
+let ContentList = document.createElement('ol');
+ContentList.className = "countries";
+document.body.append(ClassContent);
 
 
-//Select 25 random countries from your list by writing a separate function that makes use of Math.random
-function randomName(){
-    let x =[];
-        for (var i = 0; i<5; i++){
-            random = Math.floor(Math.random()*list.length);
-            na =list[random];
-            x.push(na);}
+//(4)Design the following function to run on the click of a button from the index page
+let button = document.querySelector("button");
+
+//(5)Select 25 random countries from your list by writing a separate function that makes use of Math.random
+//(6)Make sure the selection is unique
+//(7)Using a .forEach or a .map function, inject a new list item for each country into the ol from #3
+button.onclick = random;
+document.querySelector(".content").appendChild(ContentList);
+function random(){
+    let CountriesIndex =[];
+    for (var i = 0; i<5; i++){
+        random = Math.floor(Math.random()*CountriesName.length);
+        if (i!=random){
+            CountriesIndex.push(random);
         }
 
 
-
-
-
-
+        CreateP = document.createElement("p1");
+        CovertedName = document.createTextNode(CountriesName[random]);
+        CreateP.appendChild(CovertedName);
+    
+        listItem = document.createElement("li");
+        listItem.appendChild(CreateP);
+        ContentList.appendChild(listItem);
+    }
+}
