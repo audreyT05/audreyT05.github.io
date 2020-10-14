@@ -282,8 +282,10 @@ let button = document.querySelector("button");
 button.onclick = random;
 document.querySelector(".content").appendChild(ContentList);
 function random(){
+    const mylist = document.querySelector('ol');
+    mylist.innerHTML = "";
     let CountriesIndex =[];
-    for (var i = 0; i<5; i++){
+    for (let i = 0; i<25; i++){
         random = Math.floor(Math.random()*CountriesName.length);
         if (i!=random){
             CountriesIndex.push(random);
@@ -294,9 +296,12 @@ function random(){
         CreateP = document.createElement("p1");
         a = CountriesName[random];
         b = CountryCode[random];
-        CovertedName = document.createTextNode(a +","+ b.bold());
-        CreateP.appendChild(CovertedName);
-    
+        CreateP.innerHTML = a +" ,"+"<strong>"+b+"</strong>" ;
+        
+
+        //CovertedName = document.createTextNode(a +","+ b);
+        //CreateP.appendChild(CovertedName);
+
         list = document.createElement("li");
         list.appendChild(CreateP);
         ContentList.appendChild(list);
