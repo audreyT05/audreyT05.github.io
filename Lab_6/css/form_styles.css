@@ -1,0 +1,31 @@
+html{
+    background-color: rgb(250, 240, 223);
+}
+form {
+    /* Center the form on the page */
+    margin: 0 auto;
+    width: 400px;
+  }
+  
+header {
+    text-align: center;
+  }
+
+ul {
+    /* set the list without ballet */
+    list-style: none;
+
+  }
+
+li {
+    margin-top: 5%;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+button{
+    background-color: rgb(226, 118, 45);
+    color:white;
+}
