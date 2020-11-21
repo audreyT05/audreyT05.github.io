@@ -22,16 +22,26 @@ async function getData() {
                     Add a new <li> element with the message to the 'redditList' element
                     Add a data entry to chartValues with author as the label and ups as the y component
                 */
-    
+               let random = Math.floor(Math.random()*listSize); // get random number from listsize
+
+               let subreddit = json.data.children[random].data["subreddit"];
+               let author = json.data.children[random].data["author"];
+               let title = json.data.children[random].data["title"];
+               let ups = json.data.children[random].data["ups"];
+               let message = "<b>Subreddit </b>: " + subreddit + " <b>Author</b>:" + author + " <b>Title</b>:" + title + " <b>Up votes</b>: " + ups;
+
+               let meg = document.createElement("li");
+               meg.innerHTML = message;
+               document.getElementById("redditList").append(meg);
+
 
                 /*.......*/
-                
                 let addToChart = {'label':author,y:ups}; // Gave this. This needs to be added to the 'chartValues'
-                /*.......*/
+                chartValues.push(addToChart); //push the data to chartValues
             }
         })
         .then(values => console.log(chartValues));
-        //chart.render(); // Do you need to remove the comments from here in order to get it to work?
+        chart.render(); // Do you need to remove the comments from here in order to get it to work?
 };
 
 window.onload = async function makeChart() {
@@ -45,7 +55,7 @@ window.onload = async function makeChart() {
             { 
                 type: "column",
                 name: "Popular Reddit",
-                dataPoints: // WHAT GOES HERE???
+                dataPoints: chartValues
             }
         ]
     });
