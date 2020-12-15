@@ -393,3 +393,47 @@ window.onload = async function loadPage() {
 
 
 }
+
+
+/*
+---------------------- Search Tasks --------------------------
+*/
+let endpoint = "/allTasks"
+const tasks = [];
+
+fetch(endpoint)
+    .then(blob => blob.json())
+    .then(data => tasks.push(...data.data))
+
+function findMatches(wordToMatch, tasks){
+  return tasks.filter(search => {
+    const regex = new RegExp(wordToMatch, 'gi');
+    return search.taskName.match(regex)
+
+
+  });
+}
+
+function displayMatches(){
+  if(document.getElementById('searchtask').value != ""){
+  const matchArray = findMatches(this.value, tasks);
+  const html = matchArray.map(search =>{
+    const regex = new RegExp(this.value, 'gi');
+    const searchName = search.taskName.replace(regex, `<span class="highlight">${this.value}</span>`);
+    return `
+      <li>
+        <span class="search">${searchName}</span>
+      </li>
+    `;
+  }).join('');
+  suggestions.innerHTML = html;
+  }
+  else{
+    suggestions.innerHTML = "";
+  }
+}
+
+const searchInput = document.getElementById('searchtask');
+const suggestions = document.querySelector('.suggestions');
+
+searchInput.addEventListener('keyup', displayMatches);
